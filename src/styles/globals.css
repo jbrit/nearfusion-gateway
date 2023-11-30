@@ -1,67 +1,87 @@
-@import 'bootstrap';
-
-@font-face {
-  font-family: 'Mona Sans';
-  src: url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
-    url('/fonts/Mona-Sans.woff2') format('woff2-variations');
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "GT Walsheim Pro";
+  /* background: linear-gradient(#e66465, #9198e5) !important; */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  color: #1f1f1f;
 }
 
-@font-face {
-  font-family: 'FK Grotesk';
-  src: url('/fonts/FKGrotesk.woff2') format('woff2 supports variations'),
-    url('/fonts/FKGrotesk.woff2') format('woff2-variations');
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
-}
-
-body,
-html {
-  -webkit-font-smoothing: antialiased;
-  color: var(--sand12);
-  font: var(--text-base);
+input{
+  font-family: "GT Walsheim Pro";
 }
 
 a {
+  color: inherit;
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-.btn {
-  text-decoration: none;
+  user-select: none;
 }
 
-#near-wallet-selector-modal .open {
-  z-index: 1001;
+* , *::before, *::after{
+  box-sizing: border-box;
+  color: #1f1f1f;
 }
 
-#w3m-modal {
-  z-index: 1002;
+button{
+  color: #1f1f1f;
+  font-family: "GT Walsheim Pro";
 }
 
-#launcher {
-  color-scheme: light;
-  width: 48px;
-  height: 50px;
-  padding: 0px;
-  margin: 10px 20px;
-  position: fixed;
-  bottom: 10px;
-  overflow: visible;
-  opacity: 1;
-  border: 0px;
-  z-index: 999998;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-property: opacity, top, bottom;
-  right: 10px;
+input:focus{
+  outline: none;
 }
 
-@media (max-width: 650px) {
-  #launcher {
-    right: 2px;
-    bottom: 10px;
+.title-font {
+  font-family: "PP Monument Extended";
+}
+
+.joystix-font{
+  font-family: "Joystix";
+}
+
+.container {
+  padding: 0 1rem;
+  max-width: 1250px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.scroll-down {
+  display: none;
+}
+.bottom-triangle {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 0;
+  border-top: 120px solid transparent;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    padding: 0 2rem;
   }
+}
+
+@media only screen and (min-width: 1200px) {
+  .scroll-down {
+    display: inline-block;
+    position: absolute;
+    bottom: 20%;
+    right: 2rem;
+  }
+}
+
+.w-100{
+  width: 100%;
+}
+
+.h-100{
+  height: 100%;
 }
