@@ -51,7 +51,6 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
         <VmInitializer />
         <WalletLayout>{getLayout(<Component {...pageProps} />)}</WalletLayout>
-
         <Toaster />
       </Hydrate>
     </QueryClientProvider>
