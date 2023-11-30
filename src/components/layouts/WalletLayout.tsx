@@ -35,7 +35,8 @@ const WalletLayout: React.FC<{
       </header>
       <div
         style={{
-          maxWidth: "50vw",
+          width: "75vw",
+          maxWidth: "500px",
           margin: "-20vw auto 0",
         }}
       >
