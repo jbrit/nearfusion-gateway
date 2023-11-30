@@ -299,77 +299,7 @@ const Home: NextPage = () => {
         />{" "}
         NEAR
       </div>
-      <Tab.Group>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "1rem",
-          }}
-        >
-          <Tab.List>
-            <Tab as={React.Fragment}>
-              {({ selected }) => (
-                <span
-                  style={{
-                    color: selected ? "black" : "#aaa",
-                    borderBottom: "2px solid",
-                    borderColor: selected ? "black" : "transparent",
-                    cursor: "pointer",
-                    fontWeight: 500,
-                    margin: "0 0.5rem",
-                  }}
-                >
-                  Assets
-                </span>
-              )}
-            </Tab>
-            <Tab as={React.Fragment}>
-              {({ selected }) => (
-                <span
-                  style={{
-                    color: selected ? "black" : "#aaa",
-                    borderBottom: "2px solid",
-                    borderColor: selected ? "black" : "transparent",
-                    cursor: "pointer",
-                    fontWeight: 500,
-                    margin: "0 0.5rem",
-                  }}
-                >
-                  Collectibles
-                </span>
-              )}
-            </Tab>
-          </Tab.List>
-        </div>
-        <div
-          style={{
-            padding: "0 1rem",
-            maxHeight: "20rem",
-            overflow: "auto",
-          }}
-        >
-          <Tab.Panels>
-            <Tab.Panel>
-              <ComponentWrapperPage src={"jibolaojo.near/widget/Assets"} />
-            </Tab.Panel>
-            <Tab.Panel>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr 1fr",
-                  gap: "1rem",
-                }}
-              >
-                <ComponentWrapperPage
-                  src={"jibolaojo.near/widget/Collectibles"}
-                />
-              </div>
-            </Tab.Panel>
-            <Tab.Panel>Transactions</Tab.Panel>
-          </Tab.Panels>
-        </div>
-      </Tab.Group>
+      <ComponentWrapperPage src={"jibolaojo.near/widget/AllTokens"} />
       <div
         style={{
           display: "grid",
