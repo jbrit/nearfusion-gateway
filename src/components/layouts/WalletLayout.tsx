@@ -36,8 +36,7 @@ const WalletLayout: React.FC<{
       <div
         style={{
           maxWidth: "50vw",
-          margin: "-43vh auto 0",
-          padding: "4rem 0 0",
+          margin: "-20vw auto 0",
         }}
       >
         <div className="course-card"><div className="course-card_main">{children}</div></div>
