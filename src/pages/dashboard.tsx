@@ -43,7 +43,7 @@ const Home: NextPage = () => {
     }
   }, []);
 
-  const shareable_url = `http://localhost:3000/dashboard?action=${btoa(
+  const shareable_url = `https://nearfusion.app/dashboard?action=${btoa(
     JSON.stringify({ user: accountId })
   )}`;
 

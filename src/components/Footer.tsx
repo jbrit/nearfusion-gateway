@@ -24,13 +24,18 @@ const Footer = (props: Props) => {
             <span>All rights reserved 2023</span>
           </div>
           <div className="footer__list">
-            <Link className="footer__link" href="/">
+            {/* <Link className="footer__link" href="/">
               About Us
-            </Link>
-            <Link className="footer__link" href="/">
+            </Link> */}
+            <Link
+              className="footer__link"
+              href="https://twitter.com/near_fusion"
+            >
               Twitter
             </Link>
-            <button className="footer__btn">Join Discord</button>
+            <Link href="https://discord.com/invite/hzGBCpAu">
+              <button className="footer__btn">Join Discord</button>
+            </Link>
           </div>
         </div>
       </nav>
