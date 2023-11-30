@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import NFLogo from "@/components/NFLogo";
 import React, { Fragment, useEffect, useState } from "react";
-import { Tab } from "@headlessui/react";
 import { ComponentWrapperPage } from "@/components/ComponentWrapperPage";
 import NearBlocks from "@/utils/nearblocks";
 import { useQuery } from "@tanstack/react-query";
@@ -32,11 +31,6 @@ const Home: NextPage = () => {
       signedIn
     ) {
       try {
-        const { user: sendToUser } = JSON.parse(atob(router.query.action))
-          .user as {
-          user: string;
-        };
-        console.log();
         setReceiver(JSON.parse(atob(router.query.action)).user);
         setModal(ModalOptions.Send);
       } catch (error) {}
@@ -270,36 +264,7 @@ const Home: NextPage = () => {
         </div>
       )}
       {/* Modal End */}
-      <div style={{ display: "flex" }}>
-        <NFLogo scale={0.8} style={{ zIndex: 2 }} />
-        <span
-          style={{
-            display: "inline-block",
-            fontSize: "1.5rem",
-            margin: "auto",
-          }}
-        >
-          {accountId}
-        </span>
-        <NFLogo scale={0.8} style={{ zIndex: 2, visibility: "hidden" }} />
-      </div>
-      <div
-        style={{
-          fontSize: "2rem",
-          fontWeight: 500,
-          textAlign: "center",
-          margin: "0 0 1rem",
-        }}
-      >
-        <ComponentWrapperPage
-          src={"jibolaojo.near/widget/WalletBalance"}
-          componentProps={{
-            balance_type: "spendable",
-          }}
-        />{" "}
-        NEAR
-      </div>
-      <ComponentWrapperPage src={"jibolaojo.near/widget/AllTokens"} />
+      <ComponentWrapperPage src={"jibolaojo.near/widget/NFBalanceWithHeader"} />
       <div
         style={{
           display: "grid",
