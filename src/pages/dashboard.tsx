@@ -197,6 +197,7 @@ const Home: NextPage = () => {
                     width: "calc(100% - 8rem)",
                     margin: "0 auto",
                     position: "relative",
+                    textAlign: 'center'
                   }}
                 >
                   {shareable_url}
@@ -207,10 +208,15 @@ const Home: NextPage = () => {
                       top: 0,
                       height: "100%",
                       width: "3rem",
-                      display: "inline-flex",
+                      display: "none",
                       alignItems: "center",
                       justifyContent: "center",
                       cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      navigator.clipboard.writeText(shareable_url);
+                      // Alert the copied text
+                      alert("URL Copied!");
                     }}
                   >
                     <div
@@ -357,9 +363,6 @@ const Home: NextPage = () => {
               >
                 <ComponentWrapperPage
                   src={"jibolaojo.near/widget/Collectibles"}
-                  componentProps={{
-                    wallet_id: "earnestetim.near",
-                  }}
                 />
               </div>
             </Tab.Panel>
